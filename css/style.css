@@ -227,18 +227,18 @@ main section {
     padding: calc(var(--margingrid)*3) var(--margingrid);
 }
 
-main section h2 , .blog h2 {
+main section h2 , .blog h2 , .comida h2 {
     color: black;
     font-family: var(--fuentesecundaria);
     font-size: 2em;
     text-align: center;
 }
 
-main section h2 span , .blog h2 span {
+main section h2 span , .blog h2 span , .comida h2 {
     color: var(--colorprincipal);
 }
 
-main section .underline , .blog .underline {
+main section .underline , .blog .underline , .comida .underline {
     position: relative;
     width: 100px;
     margin: 0 auto;
@@ -246,14 +246,14 @@ main section .underline , .blog .underline {
     margin-bottom: var(--margingrid);
 }
 
-main section .underline hr , .blog .underline hr {
+main section .underline hr , .blog .underline hr , .comida .underline hr {
     position: absolute;
     width: 100%;
     top: -1px;
     border-color: var(--colorprincipal);
 }
 
-main section .underline span , .blog .underline span {
+main section .underline span , .blog .underline span , .comida .underline span {
     color: var(--colorprincipal);
     font-weight: 700;
 }
@@ -387,6 +387,61 @@ main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
     font-weight: 700;
     padding-bottom: var(--margingrid);
 }
+
+/* menu */
+
+.fondo-negro {
+    background-color: black;
+    color: white;
+}
+
+.comida .container .flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.comida .flex .div {
+    display: flex;
+}
+.comida h2 {
+    color: white;
+    padding-top: var(--margingrid);
+}
+.comida h2 span {
+    color: var(--colorprincipal);
+}
+.comida p {
+    color: white;
+}
+.comida aside li {
+    padding: calc(var(--margingrid)/1.5);
+}
+.comida aside li.view {
+    background-color: var(--colorprincipal);
+    border-radius: 8px;
+}
+.comida aside ul {
+    margin-bottom: calc(var(--margingrid)*4);
+}
+.comida aside .separador {
+    width: calc(var(--margingrid)*4);
+}
+.comida aside hr {
+    border-color: var(--colorprincipal);
+}
+
+.comida div li h3 {
+    font-weight: 900;
+    padding: var(--margingrid) 0;
+}
+.comida div li h3 span{
+    float: right;
+    color: var(--colorprincipal);
+}
+.comida div.comidas li  {
+    margin-top: calc(var(--margingrid)*3);
+}
+
+
 /* mediaquerys */
 
 @media(min-width: 600px) {
@@ -430,6 +485,31 @@ main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
     .blog section article:nth-child(3) {
         grid-column: 3;
         grid-row: 1;
+    }
+    .comida .flex aside {
+        width: 35%;
+        padding-right: 50px;
+    }
+    .comida .flex .comidas {
+        width: 65%;
+    }
+    .comida div.comidas li:first-child  {
+        margin-top: 0;
+    }
+    .comidas {
+        display: flex;
+    }
+    .comidas li img {
+        width: 20%;
+        display: inline-block;
+    }
+    .comidas li div {
+        width: 75%;
+        display: inline-block;
+        float: right;
+    }
+    .comidas li:last-child {
+        margin-bottom: 50px;
     }
 }
 
