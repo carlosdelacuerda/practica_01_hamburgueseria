@@ -227,18 +227,18 @@ main section {
     padding: calc(var(--margingrid)*3) var(--margingrid);
 }
 
-main section h2 {
+main section h2 , .blog h2 {
     color: black;
     font-family: var(--fuentesecundaria);
     font-size: 2em;
     text-align: center;
 }
 
-main section h2 span {
+main section h2 span , .blog h2 span {
     color: var(--colorprincipal);
 }
 
-main section .underline {
+main section .underline , .blog .underline {
     position: relative;
     width: 100px;
     margin: 0 auto;
@@ -246,14 +246,14 @@ main section .underline {
     margin-bottom: var(--margingrid);
 }
 
-main section .underline hr {
+main section .underline hr , .blog .underline hr {
     position: absolute;
     width: 100%;
     top: -1px;
     border-color: var(--colorprincipal);
 }
 
-main section .underline span {
+main section .underline span , .blog .underline span {
     color: var(--colorprincipal);
     font-weight: 700;
 }
@@ -336,6 +336,57 @@ main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
 
 /* fin aboutus */
 
+/* our services */
+
+.blog {
+    padding-top: calc(var(--margingrid)*2);
+}
+.blog section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-bottom: calc(var(--margingrid)*10);
+}
+
+.blog section article {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: calc(var(--margingrid)*2);
+}
+.blog section article + article {
+    grid-column: 2;
+    grid-row: 1;
+}
+.blog section article:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.blog figure div {
+    background-color: #fa573abb;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    z-index: 1;
+    padding: var(--margingrid);
+    color: white;
+    line-height: 1.3em;
+}
+
+.blog figure {
+    display: inline-grid;
+}
+
+.blog article h3 {
+    padding: var(--margingrid);
+}
+.blog article h5 {
+    color: var(--colorprincipal);
+    font-size: 1em;
+    font-weight: 700;
+    padding-bottom: var(--margingrid);
+}
 /* mediaquerys */
 
 @media(min-width: 600px) {
@@ -359,6 +410,26 @@ main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
     }
     main #aboutus {
         margin-bottom: 2em;
+    }
+    .blog section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        padding-bottom: calc(var(--margingrid)*10);
+    }
+    
+    .blog section article {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .blog section article + article {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .blog section article:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1;
     }
 }
 
