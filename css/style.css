@@ -379,7 +379,7 @@ main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
 }
 
 .blog article h3 {
-    padding: var(--margingrid);
+    padding: var(--margingrid) 0;
 }
 .blog article h5 {
     color: var(--colorprincipal);
